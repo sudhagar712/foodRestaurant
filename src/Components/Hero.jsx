@@ -7,6 +7,10 @@ import "swiper/css";
 import { BikeIcon, HeartPulse, ShoppingBag, SoupIcon } from "lucide-react";
 import Button from "./Button";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import SwiperCore from "swiper";
+
+
+SwiperCore.use([Autoplay])
 
 const Hero = () => {
   return (

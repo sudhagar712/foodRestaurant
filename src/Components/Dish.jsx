@@ -52,8 +52,8 @@ const Dish = () => {
         </h1>
         {/* Description */}
         <div>
-          <p className="font-Geist tracking-wider text-center dark:text-secondary-dark">
-            {DISHESTEXT.description}
+          <p className="font-Geist tracking-wider text-center text-md md:text-xl lg:text-2xl  dark:text-primaryText-dark">
+            <em> {DISHESTEXT.description}</em>
           </p>
         </div>
         {/* Category Links */}
@@ -76,9 +76,9 @@ const Dish = () => {
         </div>
         {/* dishcard */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4 my-8 p-5">
-            {filterItems.map((project, index) => (
-                <DishCard key={index} project={project}/>
-            ))}
+          {filterItems.map((project, index) => (
+            <DishCard key={index} project={project} />
+          ))}
         </div>
       </div>
     </section>
