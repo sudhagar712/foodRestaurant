@@ -1,9 +1,30 @@
 import { ShoppingBag } from 'lucide-react'
-import React from 'react'
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const PromoCard = ({props}) => {
+
+
+
+   useEffect(() => {
+      AOS.init({
+        offset: 200,
+        duration: 100,
+        easing: "ease-in-sine",
+        delay: 100,
+      });
+      AOS.refresh(); // Refresh AOS animations
+    }, []);
+
+
+
   return (
-    <div className="flex flex-col p-5 m-5 rounded-xl bg-bgTried-light dark:bg-bgTried-dark  shadow-2xl">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      className="flex flex-col p-5 m-5 rounded-xl bg-bgTried-light dark:bg-black  shadow-2xl"
+    >
       <img src={props.image} alt={props.title} className="w-40 mx-auto " />
       <h3 className="bg-red-600 font-Bebas text-white font-extrabold p-1 uppercase flex w-fit shadow-xl">
         {props.label}

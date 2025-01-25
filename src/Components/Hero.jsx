@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import HeroCard from "./HeroCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BENEF, HERO, HEROTEXTE } from "../constants/index";
@@ -9,10 +11,19 @@ import Button from "./Button";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import SwiperCore from "swiper";
 
-
-SwiperCore.use([Autoplay])
+SwiperCore.use([Autoplay]);
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 200,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh(); // Refresh AOS animations
+  }, []);
+
   return (
     <section>
       <div className="grid min-h-[135vh] md:min-h-[100vh] items-center justify-center">
@@ -38,7 +49,10 @@ const Hero = () => {
             </Swiper>
           </div>
           {/* text */}
-          <div className="text-center md:text-start md:items-start  lg:basis-2/5 ">
+          <div
+            data-aos="fade-left"
+            className="text-center md:text-start md:items-start  lg:basis-2/5 "
+          >
             <h1 className="font-Geist md:mt-[130px] uppercase text-3xl font-extrabold md:pr-10 lg:text-6xl text-primaryText-light dark:text-primaryText-dark mb-4">
               {HEROTEXTE.header}
             </h1>

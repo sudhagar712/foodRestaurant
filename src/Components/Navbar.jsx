@@ -13,19 +13,18 @@ const toggleMobileMenu = () => {
 
 
 
-const handleScroll = (event , targetId) =>{
+const handleScroll = (event, targetId) => {
   event.preventDefault();
   const targetElement = document.getElementById(targetId);
-  if(targetElement){
-    const offSetTop = targetElement.offsetTop - 20;
+  if (targetElement) {
+    const offsetTop = targetElement.offsetTop - 20; // Adjust as necessary
     window.scrollTo({
       top: offsetTop,
-      behavior:"smooth",
-    })
+      behavior: "smooth",
+    });
   }
-  setIsMobileOpen(false)
-}
-
+  setIsMobileOpen(false);
+};
 
 
 

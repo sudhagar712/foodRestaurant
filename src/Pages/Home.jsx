@@ -5,6 +5,7 @@ import Dish from '../Components/Dish'
 import About from '../Components/About'
 import Review from '../Components/Review'
 import Contact from '../Components/Contact'
+import Footer from '../Components/Footer'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <About/>
       <Review/>
      <Contact/>
+     <Footer/>
     </div>
   )
 }
