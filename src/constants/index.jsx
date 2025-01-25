@@ -190,7 +190,7 @@ export const SNACK = [
 
 import salad1 from "../assets/salad1.png";
 import salad2 from "../assets/salad2.png";
-import salad3 from "../assets/salad3.png";
+
 import salad4 from "../assets/salad4.png";
 
 export const SALAD = [
@@ -208,13 +208,13 @@ export const SALAD = [
       "A selection of seasonal fruits for a sweet and refreshing treat.",
     price: "24.99",
   },
-  {
-    image: salad3,
-    title: "Caesar Salad",
-    description:
-      "Crunchy salad with grilled chicken, croutons, and a creamy Caesar dressing.",
-    price: "20.99",
-  },
+  // {
+  //   image: salad3,
+  //   title: "Caesar Salad",
+  //   description:
+  //     "Crunchy salad with grilled chicken, croutons, and a creamy Caesar dressing.",
+  //   price: "20.99",
+  // },
   {
     image: salad4,
     title: "Greek Salad",
